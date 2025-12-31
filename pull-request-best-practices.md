@@ -209,3 +209,51 @@ Key technical decisions
 ## Documentation
 What docs were added/updated
 ```
+
+### 9. Advanced: Draft PRs
+
+```bash
+# Create draft PR for early feedback
+gh pr create --draft --title "WIP: Add caching layer" --body "Early draft for feedback on approach.
+
+Questions:
+1. Should we use Redis or in-memory?
+2. What should TTL be?
+"
+```
+
+**Use Draft PRs For**:
+- Getting early feedback
+- Showing progress
+- Discussing approach
+- Breaking up large features
+
+### 10. After PR Merges
+
+```bash
+# Update your local repo
+git checkout main
+git pull upstream main
+
+# Delete feature branch locally
+git branch -d feature/old-feature
+
+# Delete remote branch
+git push origin --delete feature/old-feature
+
+# Celebrate!
+
+## Real Company PR Review Stats
+- Average review time: 24-48 hours
+- Ideal PR size: 200-300 lines
+- Reviews per PR: 2-3 developers
+- Revision rounds: 1-2 on average
+- Approval needed: 1-2 approvals
+
+## Career Impact
+Good PR practices show:
+- Communication skills
+- Attention to detail
+- Team collaboration
+- Professional maturity
+- Code quality focus
